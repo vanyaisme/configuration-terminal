@@ -193,5 +193,22 @@ mkcd() {
     mkdir -p "$1" && cd "$1"
 }
 
+# Create directory, cd into it and initialize git (3x)
+mcg() {
+    if [ -z "$1" ]; then
+        echo "Usage: mcg <directory-name>"
+        return 1
+    fi
+    mkdir -p "$1" && cd "$1" && git init
+}
+# Cd into directory and initialize git from there
+cdg() {
+    if [ -z "$1" ]; then
+        echo "Usage: cdg <directory-name>"
+        return 1
+    fi
+    cd "$1" && git init
+}
+
 # Created by `pipx`
 export PATH="$PATH:/Users/withvanko./.local/bin"
