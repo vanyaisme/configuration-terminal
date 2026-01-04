@@ -172,5 +172,21 @@ setopt HIST_SAVE_NO_DUPS        # Don't write duplicates to history file
 setopt HIST_REDUCE_BLANKS       # Remove superfluous blanks
 setopt SHARE_HISTORY            # Share history across all sessions
 
+# ============================================
+# CUSTOM FUNCTIONS
+# ============================================
+
+# Update everything outdated (brew, AppStore, Oh my Zsh)
+updateall() {
+  echo "=== Homebrew ==="
+  brew update && brew upgrade && brew cleanup
+
+  echo "\n=== Mac App Store ==="
+  mas upgrade
+
+  echo "\n=== Oh My Zsh ==="
+  omz update
+}
+
 # Created by `pipx`
 export PATH="$PATH:/Users/withvanko./.local/bin"
