@@ -119,6 +119,11 @@ source $ZSH/oh-my-zsh.sh
 alias zshconfig="open -a 'Sublime Text' ~/.zshrc"
 alias ohmyzsh="open -R ~/.oh-my-zsh"
 
+#bat - Better cat with syntax highlighting
+alias cat='bat --paging=never'
+alias less='bat'
+export BAT_THEME="TwoDark"
+
 source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
