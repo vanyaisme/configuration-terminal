@@ -141,6 +141,11 @@ export RIPGREP_CONFIG_PATH="$HOME/.ripgreprc"
 # Ctrl+T - Search files
 # Alt+C - Search directories
 
+zoxide #Smart cd that learns patterns
+eval "$(zoxide init zsh)"
+alias cd='z'
+alias cdi='zi'  # Interactive selection
+
 source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
