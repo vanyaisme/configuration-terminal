@@ -264,6 +264,11 @@ myip() {
     curl -s ifconfig.me
 }
 
+# Create a backup of a file
+backup() {
+    cp "$1" "$1.backup-$(date +%Y%m%d-%H%M%S)"
+}
+
 
 # Created by pipx
 export PATH="$PATH:/Users/withvanko./.local/bin"
