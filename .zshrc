@@ -259,6 +259,11 @@ ql() {
     qlmanage -p "$@" &>/dev/null
 }
 
+# Get current public IP
+myip() {
+    curl -s ifconfig.me
+}
+
 
 # Created by pipx
 export PATH="$PATH:/Users/withvanko./.local/bin"
