@@ -127,6 +127,20 @@ export BAT_THEME="TwoDark"
 # fd - Better find command
 alias find='fd' 
 
+# Fuzzy finder for command history, files, etc. 
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# Improved fzf defaults
+export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git'
+export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+export FZF_ALT_C_COMMAND='fd --type d --hidden --follow --exclude .git'
+
+export RIPGREP_CONFIG_PATH="$HOME/.ripgreprc"
+# Keybindings:
+# Ctrl+R - Search command history
+# Ctrl+T - Search files
+# Alt+C - Search directories
+
 source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
