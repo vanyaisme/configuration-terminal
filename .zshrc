@@ -246,5 +246,14 @@ fshow() {
         --bind "enter:execute:git show --color=always {2} | less -R"
 }
 
+# Interactive git branch checkout with fzf
+fbr() {
+    local branches branch
+    branches=$(git branch -a) &&
+    branch=$(echo "$branches" | fzf +m) &&
+    git checkout $(echo "$branch" | sed "s/.* //" | sed "s#remotes/[^/]*/##")
+}
+
+
 # Created by pipx
 export PATH="$PATH:/Users/withvanko./.local/bin"
