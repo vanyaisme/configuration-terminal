@@ -70,7 +70,23 @@ export ZSH="$HOME/.oh-my-zsh"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git z sublime vscode zsh-autosuggestions zsh-syntax-highlighting)
+plugins=(
+    git
+    z
+    sublime
+    vscode
+    command-not-found       # Suggests package for missing commands
+    docker                  # Docker aliases and completion
+    pip                     # Python pip completion
+    python                  # Python aliases
+    brew                    # Homebrew completion
+    macos                   # macOS specific aliases
+    colored-man-pages       # Colorize man pages
+    copyfile                # Copy file contents to clipboard
+    copypath                # Copy current path to clipboard
+    zsh-autosuggestions
+    zsh-syntax-highlighting #SHOULD BE LAST
+)
 
 source $ZSH/oh-my-zsh.sh
 
