@@ -237,5 +237,14 @@ killit() {
     ps aux | grep -v grep | grep -i -e "$1" | awk '{print $2}' | xargs kill -9
 }
 
+# Git commit browser with fzf (requires fzf)
+fshow() {
+    git log --graph --color=always \
+        --format="%C(auto)%h%d %s %C(black)%C(bold)%cr" "$@" |
+    fzf --ansi --no-sort --reverse --tiebreak=index \
+        --preview 'git show --color=always {2}' \
+        --bind "enter:execute:git show --color=always {2} | less -R"
+}
+
 # Created by pipx
 export PATH="$PATH:/Users/withvanko./.local/bin"
