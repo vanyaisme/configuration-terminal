@@ -154,5 +154,23 @@ PROMPT='%F{#f39c12}[%1~]%f ' #f39c12 #ff8c42 #ff9a56!
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
-# Created by `pipx` on 2025-12-29 04:43:27
+# ============================================
+# HISTORY CONFIGURATION
+# ============================================
+HISTFILE=~/.zsh_history
+HISTSIZE=50000
+SAVEHIST=50000
+
+# Better history settings
+setopt EXTENDED_HISTORY         # Write timestamp to history
+setopt HIST_EXPIRE_DUPS_FIRST   # Expire duplicate entries first
+setopt HIST_IGNORE_DUPS         # Don't record duplicate entries
+setopt HIST_IGNORE_ALL_DUPS     # Delete old duplicates
+setopt HIST_FIND_NO_DUPS        # Don't display duplicates when searching
+setopt HIST_IGNORE_SPACE        # Don't record commands starting with space
+setopt HIST_SAVE_NO_DUPS        # Don't write duplicates to history file
+setopt HIST_REDUCE_BLANKS       # Remove superfluous blanks
+setopt SHARE_HISTORY            # Share history across all sessions
+
+# Created by `pipx`
 export PATH="$PATH:/Users/withvanko./.local/bin"
