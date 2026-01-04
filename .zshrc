@@ -254,6 +254,11 @@ fbr() {
     git checkout $(echo "$branch" | sed "s/.* //" | sed "s#remotes/[^/]*/##")
 }
 
+# Quick look at file (macOS)
+ql() {
+    qlmanage -p "$@" &>/dev/null
+}
+
 
 # Created by pipx
 export PATH="$PATH:/Users/withvanko./.local/bin"
