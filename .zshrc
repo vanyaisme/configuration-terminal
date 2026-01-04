@@ -188,5 +188,10 @@ updateall() {
   omz update
 }
 
+# Create directory and cd into it
+mkcd() {
+    mkdir -p "$1" && cd "$1"
+}
+
 # Created by `pipx`
 export PATH="$PATH:/Users/withvanko./.local/bin"
