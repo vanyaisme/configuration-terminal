@@ -231,5 +231,11 @@ extract() {
         echo "'$1' is not a valid file"
     fi
 }
+
+# Find process by name and kill
+killit() {
+    ps aux | grep -v grep | grep -i -e "$1" | awk '{print $2}' | xargs kill -9
+}
+
 # Created by pipx
 export PATH="$PATH:/Users/withvanko./.local/bin"
