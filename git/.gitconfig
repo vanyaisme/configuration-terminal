@@ -1,0 +1,73 @@
+# ~/.gitconfig: Git configuration file
+
+[user]
+	# Set your name and email
+	name = REPLACE_WITH_YOUR_NAME
+	email = REPLACE_WITH_YOUR_EMAIL
+
+[core]
+	editor = vim
+	autocrlf = input
+	excludesfile = ~/.gitignore_global
+
+[color]
+	ui = auto
+	branch = auto
+	diff = auto
+	status = auto
+
+[color "branch"]
+	current = yellow reverse
+	local = yellow
+	remote = green
+
+[color "diff"]
+	meta = yellow bold
+	frag = magenta bold
+	old = red bold
+	new = green bold
+
+[color "status"]
+	added = green
+	changed = yellow
+	untracked = red
+
+[alias]
+	# Short aliases
+	st = status
+	co = checkout
+	br = branch
+	ci = commit
+	
+	# Useful aliases
+	unstage = reset HEAD --
+	last = log -1 HEAD
+	visual = log --graph --oneline --all --decorate
+	lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+	
+	# Show changes
+	diff-staged = diff --staged
+	diff-cached = diff --cached
+	
+	# Amend last commit
+	amend = commit --amend --no-edit
+
+[push]
+	default = simple
+	followTags = true
+
+[pull]
+	rebase = false
+
+[init]
+	defaultBranch = main
+
+[diff]
+	tool = vimdiff
+
+[merge]
+	tool = vimdiff
+	conflictstyle = diff3
+
+[help]
+	autocorrect = 10
