@@ -53,6 +53,7 @@ If you prefer to install configurations manually:
 
 ```bash
 # Backup your existing configurations first
+chmod +x scripts/backup.sh
 ./scripts/backup.sh
 
 # Install specific configuration

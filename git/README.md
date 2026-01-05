@@ -33,7 +33,7 @@ git config --global user.email "your.email@example.com"
   - `git lg` → pretty log graph
   - `git visual` → graphical log view
 - **Default branch**: Set to `main`
-- **Merge tool**: vimdiff
+- **Merge tool**: vimdiff (requires Vim to be installed; update `.gitconfig` if you prefer a different merge tool)
 - **Global gitignore**: Excludes common OS and editor files
 
 ## Customization

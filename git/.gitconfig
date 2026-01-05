@@ -70,4 +70,4 @@
 	conflictstyle = diff3
 
 [help]
-	autocorrect = 1
+	autocorrect = 10

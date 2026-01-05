@@ -69,8 +69,13 @@ show_menu() {
     echo -n "Select an option [1-7]: "
 }
 
-# Get script directory
-SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+# Prevent sourcing and determine script directory
+if [[ "${BASH_SOURCE[0]}" != "$0" ]]; then
+    print_error "This script is intended to be executed, not sourced. Please run it as ./install.sh"
+    return 1 2>/dev/null || exit 1
+fi
+
+SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
 
 # Installation functions
 install_bash() {
@@ -145,5 +150,6 @@ while true; do
     esac
     
     echo ""
-    read -p "Press Enter to continue..."
+    echo "Press Enter to continue..."
+    read -r
 done
