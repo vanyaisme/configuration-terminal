@@ -2,7 +2,7 @@
 
 Bundle of everything I carefully adjusted for the usage of the terminal. This repository contains well-organized terminal configurations that you can easily install and share.
 
-## 📁 Repository Structure
+## Repository Structure
 
 ```
 configuration-terminal/
@@ -29,7 +29,7 @@ configuration-terminal/
 └── README.md           # This file
 ```
 
-## 🚀 Quick Start
+## Quick Start
 
 ### Installation
 
@@ -68,7 +68,7 @@ cp git/.gitignore_global ~/.gitignore_global
 source ~/.bashrc  # or source ~/.zshrc
 ```
 
-## 📋 Features
+## Features
 
 ### Bash Configuration
 - Color support for ls, grep, and other commands
@@ -108,7 +108,7 @@ source ~/.bashrc  # or source ~/.zshrc
 - Global gitignore for OS/editor files
 - Default branch set to main
 
-## 🔧 Customization
+## Customization
 
 Each configuration directory contains its own README with specific customization instructions. Feel free to modify the configurations to suit your needs:
 
@@ -116,7 +116,7 @@ Each configuration directory contains its own README with specific customization
 2. Test your changes
 3. Commit and push to save your customizations
 
-## 📝 Usage Tips
+## Usage Tips
 
 ### Installing Individual Configurations
 
@@ -134,7 +134,7 @@ Before making changes, create a backup:
 
 This creates a timestamped backup directory in your home folder.
 
-## 🤝 Contributing
+## Contributing
 
 Feel free to submit issues and enhancement requests! If you have improvements or additional configurations to share:
 
@@ -144,15 +144,15 @@ Feel free to submit issues and enhancement requests! If you have improvements or
 4. Push to the branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
-## 📄 License
+## License
 
 This project is open source and available under the MIT License.
 
-## ⭐ Acknowledgments
+## Acknowledgments
 
 These configurations are based on best practices and personal preferences refined over time. Feel free to use, modify, and share them!
 
-## 📞 Support
+## Support
 
 If you encounter any issues or have questions:
 - Open an issue in the repository
@@ -161,4 +161,4 @@ If you encounter any issues or have questions:
 
 ---
 
-**Happy configuring! 🎉**
+**Happy configuring!**
