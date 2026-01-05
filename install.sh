@@ -3,7 +3,7 @@
 # Terminal Configuration Installer
 # This script helps you install terminal configurations
 
-set -e
+# Note: do not use 'set -e' here; errors are handled explicitly so the menu can continue after failures.
 
 # Colors for output
 RED='\033[0;31m'
