@@ -2,8 +2,8 @@
 
 [user]
 	# Set your name and email
-	name = Your Name
-	email = your.email@example.com
+	name = REPLACE_WITH_YOUR_NAME
+	email = REPLACE_WITH_YOUR_EMAIL
 
 [core]
 	editor = vim
