@@ -100,7 +100,13 @@ install_tmux() {
 install_git() {
     print_info "Installing Git configuration..."
     install_config "$SCRIPT_DIR/git/.gitconfig" "$HOME/.gitconfig"
-    install_config "$SCRIPT_DIR/git/.gitignore_global" "$HOME/.gitignore_global"
+
+    gitignore_src="$SCRIPT_DIR/git/.gitignore_global"
+    if [ -f "$gitignore_src" ]; then
+        install_config "$gitignore_src" "$HOME/.gitignore_global"
+    else
+        print_warning "Global Git ignore file not found at $gitignore_src; skipping installation."
+    fi
     
     print_warning "Don't forget to update your git user information:"
     echo "  git config --global user.name \"Your Name\""
